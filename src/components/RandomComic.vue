@@ -15,7 +15,7 @@ const comic = ref(null)
 const fetchComic = async () => {
   const randomNum = Math.floor(Math.random() * 2800) + 1
   const url = `https://xkcd.com/${randomNum}/info.0.json`
-  const proxyUrl = `https://thingproxy.freeboard.io/fetch/${url}`
+  const proxyUrl = `https://api.allorigins.win/raw?url=${url}`
 
   try {
     const res = await fetch(proxyUrl)
